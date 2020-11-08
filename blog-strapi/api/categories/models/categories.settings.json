@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "name": "categories"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "default": "Uncategorized",
+      "required": true,
+      "unique": false
+    },
+    "posts": {
+      "via": "category",
+      "collection": "posts"
+    }
+  }
+}
