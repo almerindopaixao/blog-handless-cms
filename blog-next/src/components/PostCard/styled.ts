@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   transition: opacity 300ms ease-in-out;
-  height: 100vh;
 
   &:hover {
     opacity: 0.8;
