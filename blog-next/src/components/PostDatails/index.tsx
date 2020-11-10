@@ -16,10 +16,14 @@ const PostDetails = ({ author, category, date, tag }: PostDetailsProps) => {
         Publicado em <Date date={date} /> por {author} |
       </Paragraph>
       <Span>
-        <Link href={`/categories/${category}`}>{category.toLowerCase()}</Link>
+        <Link href="/categories/[category]" as={`/categories/${category}`}>
+          <a>{category.toLowerCase()}</a>
+        </Link>
       </Span>
       <Span>
-        <Link href={`/tags/${tag}`}>{tag.toLowerCase()}</Link>
+        <Link href="/tags/[tag]" as={`/tags/${tag}`}>
+          <a>{tag.toLowerCase()}</a>
+        </Link>
       </Span>
     </Container>
   );
