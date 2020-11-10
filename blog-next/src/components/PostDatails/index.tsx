@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Container, Paragraph, Span } from './styled';
 import Date from '../Date';
 
@@ -14,8 +15,12 @@ const PostDetails = ({ author, category, date, tag }: PostDetailsProps) => {
       <Paragraph>
         Publicado em <Date date={date} /> por {author} |
       </Paragraph>
-      <Span>{category}</Span>
-      <Span>{tag}</Span>
+      <Span>
+        <Link href={`/categories/${category}`}>{category.toLowerCase()}</Link>
+      </Span>
+      <Span>
+        <Link href={`/tags/${tag}`}>{tag.toLowerCase()}</Link>
+      </Span>
     </Container>
   );
 };
