@@ -5,8 +5,11 @@ export const Container = styled.header`
     background: ${theme.colors.primary};
     color: ${theme.colors.white};
     font-size: ${theme.font.sizes.large};
-    padding: ${theme.spacings.medium};
-    text-align: center;
+    padding: ${theme.spacings.large};
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   `}
 
   a {

@@ -1,7 +1,9 @@
+import Comments from '../../components/Comments';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Heading from '../../components/Heading';
 import MainContainer from '../../components/MainContainer';
+import PostContainer from '../../components/PostContainer';
 import PostCover from '../../components/PostCover';
 import PostDetails from '../../components/PostDatails';
 import { PostData } from '../../domain/posts/post';
@@ -23,7 +25,8 @@ const Post = ({ post }: PostProps) => {
           category={post.category.name}
           tag={post.tag.name}
         />
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        <PostContainer content={post.content} />
+        <Comments slug={post.slug} title={post.title} />
       </MainContainer>
       <Footer />
     </>

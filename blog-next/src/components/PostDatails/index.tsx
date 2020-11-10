@@ -1,4 +1,4 @@
-import { Container } from './styled';
+import { Container, Paragraph, Span } from './styled';
 import Date from '../Date';
 
 export type PostDetailsProps = {
@@ -11,7 +11,11 @@ export type PostDetailsProps = {
 const PostDetails = ({ author, category, date, tag }: PostDetailsProps) => {
   return (
     <Container>
-      Publicado por <Date date={date} />{' '}
+      <Paragraph>
+        Publicado em <Date date={date} /> por {author} |
+      </Paragraph>
+      <Span>{category}</Span>
+      <Span>{tag}</Span>
     </Container>
   );
 };
